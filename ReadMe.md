@@ -64,11 +64,13 @@ Expected response:
 Alternatively, you can import and use the included Insomnia Request Collection
 
 ## Running with Docker
-1. Build the Docker image:
+1. Set up your variables in the your.env file and then rename to ".env"
+
+2. Build the Docker image:
    ```sh
    docker build -t twilio-listener .
    ```
-2. Run the container:
+3. Run the container:
    ```sh
    docker run -p 8001:8001 --env-file .env twilio-listener
    ```
