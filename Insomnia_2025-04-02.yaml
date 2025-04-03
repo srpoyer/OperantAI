@@ -1,0 +1,98 @@
+type: collection.insomnia.rest/5.0
+name: Twilio Collection
+meta:
+  id: wrk_420e432ca5a64b038c24d23d1acc5e4a
+  created: 1743637175699
+  modified: 1743637175699
+collection:
+  - url: http://127.0.0.1:8001/message
+    name: Send Phone Number
+    meta:
+      id: req_cca29b299b3144f1883e4d92db104cb9
+      created: 1743650860426
+      modified: 1743652598771
+      isPrivate: false
+      sortKey: -1743650860426
+    method: POST
+    body:
+      mimeType: application/x-www-form-urlencoded
+      params:
+        - name: phone_number
+          value: "{% faker 'randomPhoneNumber' %}"
+          id: pair_88f7507d68914e09a9327e5ac47d0f4d
+    headers:
+      - name: Content-Type
+        value: application/x-www-form-urlencoded
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:8001/message
+    name: Send Credit Card
+    meta:
+      id: req_79398b6a2ad740a5866b50acc7a55199
+      created: 1743651181146
+      modified: 1743651827405
+      isPrivate: false
+      sortKey: -1743644024227.5
+    method: POST
+    body:
+      mimeType: application/x-www-form-urlencoded
+      params:
+        - name: credit_card
+          value: 1234-5678-9012-3456
+          id: pair_88f7507d68914e09a9327e5ac47d0f4d
+    headers:
+      - name: Content-Type
+        value: application/x-www-form-urlencoded
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:8001/message
+    name: Send Address
+    meta:
+      id: req_60e669fbe0e24ddbbb3240c6fff39477
+      created: 1743651882039
+      modified: 1743651928782
+      isPrivate: false
+      sortKey: -1743640606128.25
+    method: POST
+    body:
+      mimeType: application/x-www-form-urlencoded
+      params:
+        - name: address
+          value: "{% faker 'randomStreetAddress' %}"
+          id: pair_88f7507d68914e09a9327e5ac47d0f4d
+    headers:
+      - name: Content-Type
+        value: application/x-www-form-urlencoded
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_bd9b62a4951751b8ef91b7820ffedeaf95289d9f
+    created: 1743637175734
+    modified: 1743637175734
+environments:
+  name: Base Environment
+  meta:
+    id: env_bd9b62a4951751b8ef91b7820ffedeaf95289d9f
+    created: 1743637175729
+    modified: 1743637175729
+    isPrivate: false
